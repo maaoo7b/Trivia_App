@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import com.maodev.triviaapp.screens.QuestionsViewModel
+import com.maodev.triviaapp.screens.TriviaHome
 import com.maodev.triviaapp.ui.theme.TriviaAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -28,10 +29,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    //TriviaHome()
+                    TriviaHome()
                 }
             }
         }
     }
 }
-
