@@ -3,6 +3,7 @@ package com.maodev.triviaapp.di
 import android.provider.SyncStateContract.Constants
 import com.maodev.triviaapp.model.Question
 import com.maodev.triviaapp.network.QuestionAPI
+import com.maodev.triviaapp.repository.QuestionRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -25,6 +26,10 @@ object AppModule {
             .build()
             .create(QuestionAPI::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun provideQuestionRepository(api: QuestionAPI) = QuestionRepository(api)
 
 
 }
